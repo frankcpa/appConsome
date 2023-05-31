@@ -6,13 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PrincipalController {
-	static String webService = "http://viacep.com.br/ws/";
-	static int codigoSucesso = 200;
-
+	
 	@GetMapping("/")
 	public ModelAndView informacep() {
-		ModelAndView modelAndView = new ModelAndView("Index");
-		return modelAndView;
+		ModelAndView modelIndex = new ModelAndView("Index");
+		modelIndex.addObject("varNaController", "teste teste teste");
+		return modelIndex;
 	}
 	
 }
